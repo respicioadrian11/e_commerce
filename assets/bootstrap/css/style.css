@@ -1,0 +1,40 @@
+.background{
+	background-color: 	#2aab26;
+	color:#fff;
+	font-weight: bolder;
+}
+.panel-background{
+	background-color: 	#2aab26;
+	color: #fff;
+	font-weight: bolder;
+}
+.panel_bg{
+	background-color: 	black;
+	color: green;
+	border: 10px;
+	padding-bottom: 5px;
+	height: auto;
+	font-weight: bolder;
+}
+
+.footer{
+	background-color: Black;
+	color:#fff;
+	font-weight: bolder;
+	height:30px;
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+}
+
+.header{
+	color: #2aab26;
+}
+.navbar-dark{
+	background: black;
+}
+.picture{
+	height: 500px;
+	width: 500px;
+}
+
