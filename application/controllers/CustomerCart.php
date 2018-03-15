@@ -34,15 +34,20 @@
 		$prodID 	 	= $this->input->post("prodID");
 		
 			$this->load->model('customerModel');
- 			
+ 			if($quantity == 0 || $quantity < $this->session->userdata('productStock')){
+ 				$return['message'] = "Invalid Order";
+ 				$return['type'] = "error";
+
+ 			}else{
 				$data = [$prodname, $prodcode, $prodprice, $quantity, $totalprice, $option, $name, $username, $address, $contact];
 				$this->customerModel->saveItem($data);
 
 				$return['message'] = "Product successfully added To Cart!";
 				$return['status']	 = 1;
 				$return['type'] = "success";
-
+			}
 				echo json_encode($return);
+		
 	
 	}
 	//LOGIN CUSTOMER

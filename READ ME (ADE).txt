@@ -1,0 +1,10 @@
+admin account:
+username:respicioadrian
+password:password
+
+customer account:
+username:ade
+password:password
+
+username:phil
+password:password

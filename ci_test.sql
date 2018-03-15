@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 15, 2018 at 06:59 AM
+-- Generation Time: Mar 15, 2018 at 08:34 AM
 -- Server version: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -77,13 +77,17 @@ INSERT INTO `cart` (`id`, `productname`, `productcode`, `price`, `quantity`, `to
 (55, 'item 2', 'c2', 40000, 2, 80000, 'Delivery', 'adrian respicio', 'ade', 'Banilad Nasugbu Batangas', '09753802042', 'DELIVERED', '2018-03-15 05:04:57'),
 (56, 'item3', 'c3', 3000, 2, 6000, 'Delivery', 'adrian respicio', 'ade', 'Banilad Nasugbu Batangas', '09753802042', 'DELIVERED', '2018-03-15 05:05:07'),
 (57, 'item 8', 'c8', 5000, 2, 10000, 'Delivery', 'adrian respicio', 'ade', 'Banilad Nasugbu Batangas', '09753802042', 'On Process...', '2018-03-15 05:05:15'),
-(58, 'item 8', 'c8', 5000, 2, 10000, 'Delivery', 'adrian respicio', 'ade', 'Banilad Nasugbu Batangas', '09753802042', 'On Process...', '2018-03-15 05:05:26'),
+(58, 'item 8', 'c8', 5000, 2, 10000, 'Delivery', 'adrian respicio', 'ade', 'Banilad Nasugbu Batangas', '09753802042', 'CANCELLED', '2018-03-15 05:05:26'),
 (59, 'item 5', 'c5', 5000, 2, 10000, 'Delivery', 'adrian respicio', 'ade', 'Banilad Nasugbu Batangas', '09753802042', 'On Process...', '2018-03-15 05:05:31'),
 (60, 'item 2', 'c2', 40000, 3, 120000, 'Delivery', 'phil. Keevin Angsioco Pacia', 'phil', 'Brgy 1', '0999898980', 'On Process...', '2018-03-15 05:06:09'),
 (61, 'item 7', 'c7', 5000, 2, 10000, 'Delivery', 'phil. Keevin Angsioco Pacia', 'phil', 'Brgy 1', '0999898980', 'DELIVERED', '2018-03-15 05:06:15'),
 (62, 'item3', 'c3', 3000, 1, 3000, 'Delivery', 'phil. Keevin Angsioco Pacia', 'phil', 'Brgy 1', '0999898980', 'On Process...', '2018-03-15 05:06:20'),
 (63, 'item 8', 'c8', 5000, 4, 20000, 'Delivery', 'phil. Keevin Angsioco Pacia', 'phil', 'Brgy 1', '0999898980', 'On Process...', '2018-03-15 05:06:26'),
-(64, 'item6', 'c6', 3000, 2, 6000, 'Delivery', 'phil. Keevin Angsioco Pacia', 'phil', 'Brgy 1', '0999898980', 'On Process...', '2018-03-15 05:06:31');
+(64, 'item6', 'c6', 3000, 2, 6000, 'Delivery', 'phil. Keevin Angsioco Pacia', 'phil', 'Brgy 1', '0999898980', 'On Process...', '2018-03-15 05:06:31'),
+(65, 'item 2', 'c2', 40000, 2, 80000, 'Delivery', 'adrian respicio', 'ade', 'Banilad Nasugbu Batangas', '09753802042', 'CANCELLED', '2018-03-15 06:40:45'),
+(66, 'item11', 'c11', 290, 1, 290, 'Delivery', 'adrian respicio', 'ade', 'Banilad Nasugbu Batangas', '09753802042', 'CANCELLED', '2018-03-15 06:41:31'),
+(68, 'item 2', 'c2', 40000, 1, 40000, 'Delivery', 'adrian respicio', 'ade', 'Banilad Nasugbu Batangas', '09753802042', 'On Process...', '2018-03-15 07:09:17'),
+(69, 'item 2', 'c2', 40000, 2, 80000, 'Delivery', 'adrian respicio', 'ade', 'Banilad Nasugbu Batangas', '09753802042', 'On Process...', '2018-03-15 07:09:55');
 
 -- --------------------------------------------------------
 
@@ -131,13 +135,15 @@ CREATE TABLE `products` (
 INSERT INTO `products` (`id`, `product_name`, `product_code`, `stock`, `price`, `image`) VALUES
 (27, 'mangga', 'm1', 0, 25, 'orange.jpg'),
 (33, 'item1', 'c1', 5, 300, '1.jpg'),
-(34, 'item 2', 'c2', 5, 40000, '2.jpg'),
+(34, 'item 2', 'c2', 5, 40000, '3.jpg'),
 (35, 'item3', 'c3', 5, 3000, '3.jpg'),
 (36, 'item 4', 'c4', 5, 5000, '4.jpg'),
 (38, 'item 5', 'c5', 5, 5000, '6.jpeg'),
 (40, 'item6', 'c6', 5, 3000, '2.jpg'),
 (41, 'item 7', 'c7', 6, 5000, '8.jpeg'),
-(42, 'item 8', 'c8', 5, 5000, '9.jpeg');
+(42, 'item 8', 'c8', 5, 5000, '9.jpeg'),
+(44, 'item11', 'c11', 5, 290, '5.jpg'),
+(45, 'item29', 'c29', 24, 6, '8.jpeg');
 
 --
 -- Indexes for dumped tables
@@ -181,7 +187,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 
 --
 -- AUTO_INCREMENT for table `customer`
@@ -193,7 +199,7 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

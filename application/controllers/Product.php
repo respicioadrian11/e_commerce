@@ -137,4 +137,4 @@
 		$this->session->unset_userdata('username');
 		redirect('home');
 	}
-	}
+}
