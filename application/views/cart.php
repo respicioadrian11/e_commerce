@@ -29,7 +29,7 @@
                     <input type="text" class="form-control" name="prodprice" id="prodprice" placeholder="Price" required="">
                   </div>
                    <div class="form-group">
-                    <input type="text" class="form-control" name="quantity" id="quantity" placeholder="Quantity" required="">
+                    <input type="number" min="0" step="1" class="form-control" name="quantity" id="quantity" placeholder="Quantity" required="">
                   </div>
                    <div class="form-group">
                     <select name="option" id="option" class="form-control">

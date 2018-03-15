@@ -10,7 +10,7 @@ class CustomerLogin extends CI_Controller{
 		$this->load->view('customerlogin');
 		$this->load->view('footer');
 	}
-	
+	//CUSTOMER REGISTRATION
 	public function registration(){
 		$name          =$this->input->post("reg_name");
 		$address  	   =$this->input->post("address");
@@ -58,7 +58,7 @@ class CustomerLogin extends CI_Controller{
 
 		echo json_encode($return);
 	}
-
+//CUSTOMER LOGIN
 	public function userlogin(){
 		$username	=$this->input->post("username");
 		$password	=$this->input->post("password");

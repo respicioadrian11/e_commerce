@@ -7,11 +7,11 @@ class Login extends CI_Controller{
 		
 
 		$this->load->view('header', $data);
-		$this->load->view('login');
+		$this->load->view('login');			//LOGIN ADMIN
 		$this->load->view('footer');
 	}
 	
-	
+//LOGIN ADMIN	
 	public function userlogin(){
 		$username	=$this->input->post("username");
 		$password	=$this->input->post("password");

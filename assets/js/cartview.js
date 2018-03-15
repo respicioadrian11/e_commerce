@@ -99,7 +99,6 @@ $(function(){
                    "<th>Total Price</th>" +
                    "<th>Mode</th>" +
                    "<th>Customer</th>" +
-                   "<th>Username</th>" +
                    "<th>address</th>" +
                    "<th>Contact</th>" +
                    "<th>Transaction Date</th>" +
@@ -119,7 +118,6 @@ $(function(){
                     "<td>"+data[i].totalprice+"Php</td>" +
                     "<td>"+data[i].mode+"</td>" +
                     "<td>"+data[i].custname+"</td>" +
-                    "<td>"+data[i].username+"</td>" +
                     "<td>"+data[i].custaddress+"</td>" +
                     "<td>"+data[i].custnumber+"</td>" +
                     "<td>"+data[i].transactiondate+"</td>" +

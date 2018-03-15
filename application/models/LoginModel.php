@@ -3,7 +3,7 @@
 	class LoginModel extends CI_Model{
 
 		public function userlogin($username, $password){
-			$this->db->where('username',$username);
+			$this->db->where('username',$username);			//LOGIN ADMIN
 			$this->db->where('password',$password);
 			$query= $this->db->get('admin');			
 
@@ -12,7 +12,7 @@
 				{
 				$userdata = array(
 						'user_id'=>$query->row(0)->id,
-						'name'=>$query->row(0)->name,
+						'name'=>$query->row(0)->name,			//ADMIN LOGIN SESSION
 						'address'=>$query->row(0)->address,
 						'username'=>$username,
 						'password'=>$password,

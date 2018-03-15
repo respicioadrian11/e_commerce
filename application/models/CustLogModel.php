@@ -4,7 +4,7 @@
 
 		public function userlogin($username, $password){
 			$this->db->where('username',$username);
-			$this->db->where('password',$password);
+			$this->db->where('password',$password);			//CUSTOMER LOGIN QUERY
 			$query= $this->db->get('customer');			
 
 
@@ -13,7 +13,7 @@
 				$userdata = array(
 						'user_id'=>$query->row(0)->id,
 						'name'=>$query->row(0)->fullname,
-						'address'=>$query->row(0)->address,
+						'address'=>$query->row(0)->address,				//LOGIN SESSION
 						'contact'=>$query->row(0)->contnumber,
 						'usernamec'=>$username,
 						'password'=>$password,
@@ -28,12 +28,12 @@
 			
 			
 		}
-
+//CUSTOMER REGISTRATION QUERY
 		public function registration($data){
 			$query = "INSERT INTO customer (fullname, address, contnumber, username, password) VALUES(?, ?, ?, ?, ?)";
     		$this->db->query($query, $data);
 		}
-
+//CHECKING IF USER EXIST IN THE DB
 		public function checkUser($reg_username, $userID){
     		$where  = "";
     		$data[] = $reg_username;

@@ -10,6 +10,11 @@
   		<link rel="stylesheet" href="<?= base_url('assets/dist/sweetalert.css') ?>">
       <link rel="stylesheet" href="<?= base_url('assets/datatables/dataTables.bootstrap.min.css') ?>">
       <link rel="stylesheet" href="<?= base_url('assets/datatables/extensions/Responsive/css/dataTables.responsive.css') ?>">
+
+       <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+        google.charts.load('current', {packages: ['corechart']});     
+      </script>
       
       
 
@@ -40,6 +45,7 @@
       <a class="navbar-brand" href="<?=base_url('product')?>"><i class="glyphicon glyphicon-home"></i> OrangeShop</a>
     </div>
     <ul class="nav navbar-nav">
+      <li><a href="<?=base_url('outstock')?>"><i class="glyphicon glyphicon-remove-sign"></i> Out of Stock</a></li>
       <li><a href="<?=base_url('cartview/admincart')?>"><i class="glyphicon glyphicon-shopping-cart"></i> Cart</a></li>
       <li><a href="<?=base_url('reports')?>"><i class="glyphicon glyphicon-book"></i> Sales Report</a></li>
     </ul>

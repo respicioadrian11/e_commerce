@@ -8,6 +8,7 @@
 			$this->load->view('cart');
 			$this->load->view('footer');
 		}
+	// ADDING ITEM TO CART
 		public function getItem(){
 			$data = null;
 			$prodID = $this->input->post('prodID');
@@ -18,7 +19,7 @@
 		}
 		echo json_encode($data);
 	}
-		
+	//SAVING ITEM TO CART CHECKOUT
 		public function saveItem(){
 		$prodname   	= $this->input->post("prodname");
 		$prodcode   	= $this->input->post("prodcode");
@@ -33,7 +34,7 @@
 		$prodID 	 	= $this->input->post("prodID");
 		
 			$this->load->model('customerModel');
-
+ 			
 				$data = [$prodname, $prodcode, $prodprice, $quantity, $totalprice, $option, $name, $username, $address, $contact];
 				$this->customerModel->saveItem($data);
 
@@ -44,6 +45,7 @@
 				echo json_encode($return);
 	
 	}
+	//LOGIN CUSTOMER
 public function enter(){
 		if($this->session->userdata('usernamec') != '')
 			{
@@ -52,6 +54,7 @@ public function enter(){
 			redirect('home');
 		}
 	}
+	//LOGOUT CUSTOMER
 
 	function logout1()
 	{

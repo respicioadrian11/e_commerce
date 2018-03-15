@@ -8,7 +8,7 @@
   		<link rel="stylesheet" href="<?= base_url('assets/bootstrap/css/fontawesome.min.css') ?>">
   		<link rel="stylesheet" href="<?= base_url('assets/bootstrap/css/style.css') ?>">
   		<link rel="stylesheet" href="<?= base_url('assets/dist/sweetalert.css') ?>">
-      <link rel="stylesheet" href="<?= base_url('assets/datatables/dataTables.bootstrap.min.csss') ?>">
+      <link rel="stylesheet" href="<?= base_url('assets/datatables/dataTables.bootstrap.min.css') ?>">
       <link rel="stylesheet" href="<?= base_url('assets/datatables/extensions/Responsive/css/dataTables.responsive.css') ?>">
 
   <style media="screen">

@@ -10,7 +10,7 @@
 
 
 		}
-
+//GETTING ITEMS VIEW BY USER
 		public function getItems(){
 		$data = null;
 		$username = $this->session->userdata('usernamec');
@@ -21,13 +21,15 @@
 		}
 		echo json_encode($data);
 	}
+
+	//CART VIEW BY ADMIN
 		public function admincart(){
 			$data['title']="Manage Cart";
 			$this->load->view('header', $data);
 			$this->load->view('cart-admin');
 			$this->load->view('footer');
 		}
-
+//DELETE ITEM IN CART
 	public function deleteItem(){
 		$prodID = $this->input->post("prodID");
 		$this->load->model('viewModel');
@@ -38,7 +40,7 @@
 		}
 		echo json_encode($return);
 	}
-
+//VIEW ALL CART ITEMS ADMIN
 	public function getItemss(){
 		$data = null;
 		$this->load->model('ViewModel');
@@ -48,7 +50,7 @@
 		}
 		echo json_encode($data);
 	}
-
+//CANCELLING ORDERS CUSTOMER
 	public function editItems(){
 		$prodID = $this->input->post("prodID");
 		$this->load->model('viewModel');
@@ -60,7 +62,7 @@
 		}
 		echo json_encode($return);
 	}
-
+//UPDATING ORDER STATUS TO DELIVER ADMIN
 	public function updateItems(){
 		$prodID = $this->input->post("prodID");
 		$this->load->model('viewModel');
