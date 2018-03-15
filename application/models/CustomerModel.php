@@ -30,7 +30,7 @@
 
   		 	public function saveItem($data)
   			{
-    		$query = "INSERT INTO cart (productname, productcode, price, quantity, totalprice, mode, custname, custaddress, custnumber) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    		$query = "INSERT INTO cart (productname, productcode, price, quantity, totalprice, mode, custname, username, custaddress, custnumber) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     		$this->db->query($query, $data);
   		}
 

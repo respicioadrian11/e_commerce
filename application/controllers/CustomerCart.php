@@ -4,7 +4,7 @@
 
 			$data['title'] = 'Shopping Cart';
 
-			$this->load->view('header1', $data);
+			$this->load->view('header2', $data);
 			$this->load->view('cart');
 			$this->load->view('footer');
 		}
@@ -27,13 +27,14 @@
 		$totalprice 	= ($prodprice * $quantity);
 		$option			=$this->input->post("option");
 		$name   		= $this->input->post("name");
+		$username   	= $this->input->post("username");
 		$address   		= $this->input->post("address");
 		$contact   		= $this->input->post("number");
 		$prodID 	 	= $this->input->post("prodID");
 		
 			$this->load->model('customerModel');
 
-				$data = [$prodname, $prodcode, $prodprice, $quantity, $totalprice, $option, $name, $address, $contact];
+				$data = [$prodname, $prodcode, $prodprice, $quantity, $totalprice, $option, $name, $username, $address, $contact];
 				$this->customerModel->saveItem($data);
 
 				$return['message'] = "Product successfully added To Cart!";
@@ -43,6 +44,20 @@
 				echo json_encode($return);
 	
 	}
+public function enter(){
+		if($this->session->userdata('usernamec') != '')
+			{
+				redirect(base_url().'customercart');	
+		}else{
+			redirect('home');
+		}
+	}
+
+	function logout1()
+	{
+		$this->session->unset_userdata('usernamec');
+		redirect('home');
+	}
+}
 
 	
-}			

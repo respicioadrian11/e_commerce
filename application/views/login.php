@@ -1,12 +1,10 @@
-<div class="container">
+<div class="container ">
   <div class="modal show" id="myModal" role="dialog">
-    <div class="modal-dialog"> 
+    <div class="modal-dialog orange"> 
     
       <!-- Modal content-->
       <div class="modal-content"  style="margin-top:120px;">
-        <div class="modal-header">
-          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
-        </div>
+         <h2 align="center" style="font-weight: bolder; color: orange">Login Admin</h2>
         <div class="modal-body" >
         	<div class="col-sm-12" id="prodMessage"></div>
           <form class="form" id="frmLogin" method="POST">

@@ -36,9 +36,9 @@ $(function(){
 
       },
       success: function(data){
-        var html = "<table class=\"table table-hover table-striped\" id=\"tblProducts\">" +
+        var html = "<table class=\"table table-hover table-striped dt-responsive\" id=\"tblProducts\">" +
                    "<thead>" +
-                   "<tr class=\"danger\">" +
+                   "<tr class=\"orange\">" +
                    "<th>Product Name</th>" +
                    "<th>Product Code</th>" +
                    "<th>Stock</th>" +
@@ -54,7 +54,7 @@ $(function(){
                     "<td>"+data[i].product_name+"</td>" +
                     "<td>"+data[i].product_code+"</td>" +
                     "<td>"+data[i].stock+"</td>" +
-                    "<td>"+data[i].price+"</td>" +
+                    "<td>"+data[i].price+"Php</td>" +
                     "<td><img src=assets/images/"+data[i].image+" class='img-responsive' width='30%' height=10%' ></td>"+
                     "<td><button class=\"btn btn-primary btnEdit\" data-id=\""+data[i].id+"\"><i class=\"glyphicon glyphicon-edit\"></i></button> " +
                     "<button class=\"btn btn-danger btnDelete\" data-id=\""+data[i].id+"\"><i class=\"glyphicon glyphicon-trash\"></</button></td>" +
@@ -124,3 +124,49 @@ $(function(){
 })
 
 
+$(function(){
+
+  getProducts();
+function getProducts(){
+    $.ajax({
+      url :        base_url + 'product/getProducts',
+      dataType:    'JSON',
+      beforeSend: function(){
+
+      },
+      success: function(data){
+        var html = "<table class=\"table table-hover table- dt-reponsive\" id=\"tblProd\">" +
+                   "<thead>" +
+                   "<tr class=\"orange\">" +
+                   "<th>Product Name</th>" +
+                   "<th>Product Code</th>" +
+                   "<th>Stock</th>" +
+                   "<th>Price</th>" +
+                   "<th>Image</th>" +
+                   "</tr>" +
+                   "</thead>" +
+                   "<tbody>";
+        if (data != null) {
+          for (var i = 0; i < data.length; i++) {
+            html += "<tr>" +
+                    "<td>"+data[i].product_name+"</td>" +
+                    "<td>"+data[i].product_code+"</td>" +
+                    "<td>"+data[i].stock+"</td>" +
+                    "<td>"+data[i].price+"Php</td>" +
+                    "<td><img src=assets/images/"+data[i].image+" class='img-responsive' width='30%' height=10%' ></td>"+
+                    "</tr>";
+          }
+        }
+           html += "</tbody>" +
+                   "</table>";
+
+        $("#tblContainerhome").html(html);
+        $(document).ready(function(){
+        $('#tblProd').DataTable();
+
+        });
+    
+      }
+    })
+  }
+})

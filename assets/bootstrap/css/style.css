@@ -1,3 +1,15 @@
+.orange{
+	background-color:#f47200;
+	color:black;
+	font-weight: bolder;
+	border-color:#f47200;
+}
+.bg{
+	background-color:#e5e5e5;
+	font-weight:bolder;
+	border-color:#f47200 ;
+
+}
 .background{
 	background-color: 	#2aab26;
 	color:#fff;
@@ -37,4 +49,3 @@
 	height: 500px;
 	width: 500px;
 }
-

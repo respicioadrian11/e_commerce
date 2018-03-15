@@ -1,9 +1,9 @@
-<div class="container">
+ <div class="container">
 	<iv class="row">
 		<div class="col-sm-6">
-			<div class="panel panel-danger">
-				<div class="panel-heading">
-					<h3 class="panel-title">Ordering Area</h3>
+			<div class="panel bg">
+				<div class="panel-heading orange">
+					<h3 class="panel-title" style="font-weight: bolder;">Ordering Area</h3>
 				</div>
 				<div class="panel-body" id="tblCont">
 
@@ -11,11 +11,12 @@
 			</div>
 		</div>
 		<div class="col-sm-6">
-			<div class="panel panel-danger">
-				<div class="panel-heading">
-					<h3 class="panel-title">Your Shopping Cart</h3>
+			<div class="panel bg">
+				<div class="panel-heading orange">
+					<h3 class="panel-title" style="font-weight: bolder;">Add Your Item Here</h3>
 				</div>
 				<div class="panel-body">
+          <h5 align="center" style="font-weight: bolder;">Please Bring Valid Id Upon Claiming Your Item </h5>
           <form class="form" id="frmCheck">
                     <input type="hidden" id="prodID" name="prodID">
                   <div class="form-group">
@@ -37,13 +38,16 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" name="name" id="name" placeholder="Fullname" required="">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Fullname" required="" value="<?php echo $this->session->userdata('name');?>" >
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" name="address" id="address" placeholder="Address" required="">
+                    <input type="text" class="form-control" name="username" id="username"  required="" value="<?php echo $this->session->userdata('usernamec');?>" >
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" name="number" id="number" placeholder="Contact Number" required="">
+                    <input type="text" class="form-control" name="address" id="address" placeholder="Address" required="" value="<?php echo $this->session->userdata('address');?>">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="number" id="number" placeholder="Contact Number" required="" value="<?php echo $this->session->userdata('contact');?>">
                   </div>
                   <div class="form-group">
                     <button type="submit" class="btn btn-success" id="btnCheck" name="btnCheck">Check Out</button>

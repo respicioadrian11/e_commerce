@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class ProductModel extends CI_Model
 {
   public function getProducts(){
-    $query = "SELECT * FROM products";
+    $query = "SELECT * FROM products WHERE stock != '0'";
     return $this->db->query($query);
   }
 

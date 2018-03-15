@@ -1,9 +1,9 @@
-<div class="container">
+ <div class="container">
 	<div class="row">
 		<div class="col-sm-4">
-			<div class="panel panel-danger">
-				<div class="panel-heading">
-					<h3 class="panel-title">Manage Products</h3>
+			<div class="panel bg">
+				<div class="panel-heading  orange">
+					<h3 class="panel-title" style="font-weight: bolder;">Manage Products</h3>
 				</div>
 				<div class="panel-body">
 					<form class="form" id="frmProducts" method="post">
@@ -34,9 +34,9 @@
 		</div>
 
 		<div class="col-sm-8">
-			<div class="panel panel-danger">
-				<div class="panel-heading">
-					<h3 class="panel-title">Product List</h3>
+			<div class="panel bg">
+				<div class="panel-heading orange">
+					<h3 class="panel-title" style="font-weight: bolder;">Product List</h3>
 				</div>
 					<div class="panel-body" id="tblContainer">
 					</div>

@@ -95,6 +95,8 @@
 		echo json_encode($data);
 	}
 
+	
+
 	public function getProduct(){
 		$data = null;
 		$prodID = $this->input->post('prodID');
@@ -126,13 +128,13 @@
 			{
 				redirect(base_url().'product');	
 		}else{
-			redirect('login');
+			redirect('home');
 		}
 	}
 
 	function logout()
 	{
 		$this->session->unset_userdata('username');
-		redirect('login');
+		redirect('home');
 	}
 	}

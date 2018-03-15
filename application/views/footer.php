@@ -12,6 +12,9 @@
     <script type="text/javascript" src="<?= base_url('assets/js/products.js') ?>"></script>
     <script type="text/javascript" src="<?= base_url('assets/js/login.js') ?>"></script>
      <script type="text/javascript" src="<?= base_url('assets/js/cart.js') ?>"></script>
+     <script type="text/javascript" src="<?= base_url('assets/js/cartview.js') ?>"></script>
+     <script type="text/javascript" src="<?= base_url('assets/js/customerlogin.js') ?>"></script>
+     <script type="text/javascript" src="<?= base_url('assets/js/filter.js') ?>"></script>
     
        
 </div>

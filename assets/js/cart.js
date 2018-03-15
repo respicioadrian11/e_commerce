@@ -14,9 +14,9 @@ $(function(){
 
       },
       success: function(data){
-        var html = "<table class=\"table table-hover table-striped table-editable\" id=\"tblProducts\">" +
+        var html = "<table class=\"table table-hover table-striped table-editable dt-responsive\" id=\"tblProducts\">" +
                    "<thead>" +
-                   "<tr class=\"danger\">" +
+                   "<tr class=\"orange\">" +
                    "<th>Product Name</th>" +
                    "<th>Product Code</th>" +
                    "<th>Product Stock</th>" +
@@ -32,7 +32,7 @@ $(function(){
                     "<td>"+data[i].product_name+"</td>" +
                     "<td>"+data[i].product_code+"</td>" +
                     "<td>"+data[i].stock+"</td>" +
-                    "<td>"+data[i].price+"</td>" +
+                    "<td>"+data[i].price+"Php</td>" +
                      "<td><img src=assets/images/"+data[i].image+" class='img-responsive' width='100%' height='10%' ></td>"+
                     "<td><button class=\"btn btn-primary btnAdd\" data-id=\""+data[i].id+"\"><i class=\"glyphicon glyphicon-shopping-cart\"></i></button> " +
                     "</tr>";
@@ -101,9 +101,14 @@ $(function(){
 
        swal(data.type, data.message, data.type);
         if (data.status == 1) {
-          $('#reset').trigger('click');
+          $('#prodname').val('');
+          $('#prodcode').val('');
+          $('#prodprice').val('');
+          $('#quantity').val('');
           getItem();
+
         }
       }
     })
   })
+
