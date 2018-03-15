@@ -106,7 +106,7 @@ $(function(){
           $("#prodCode").val(data.product_code);
           $("#prodStock").val(data.stock);
           $("#prodPrice").val(data.price);
-          $("#image").val(data.image);
+          $("#userfile").val(data.image);
           $("#prodID").val(data.id);
         }
       }
@@ -118,7 +118,7 @@ $(function(){
     $("#prodCode").val('');
     $("#prodStock").val('');
     $("#prodPrice").val('');
-    $("#image").val('');
+    $("#userfile").val('');
     $("#prodID").val('');
   })
 })
