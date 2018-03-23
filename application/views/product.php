@@ -34,6 +34,10 @@
 		</div>
 
 		<div class="col-sm-9">
+			<!--------<a href="<base_url('excel/export');?>"  class="btn btn-info"  style="margin-bottom: 5px;">Export to Excel</a>-->
+			<form method="POST" action="<?=base_url();?>excel/action" style="margin-bottom: 5px;">
+				<button type="submit" name="export" class="btn btn-info">Export to Excel</button>
+			</form>
 			<div class="panel bg">
 				<div class="panel-heading orange">
 					<h3 class="panel-title" style="font-weight: bolder;">Product List</h3>

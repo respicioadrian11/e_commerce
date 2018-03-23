@@ -47,7 +47,17 @@
     <ul class="nav navbar-nav">
       <li><a href="<?=base_url('outstock')?>"><i class="glyphicon glyphicon-remove-sign"></i> Out of Stock</a></li>
       <li><a href="<?=base_url('cartview/admincart')?>"><i class="glyphicon glyphicon-shopping-cart"></i> Cart</a></li>
-      <li><a href="<?=base_url('reports')?>"><i class="glyphicon glyphicon-book"></i> Sales Report</a></li>
+      <li><div class="dropdown" style="padding-top: 8px;">
+            <button class="btn btn-link dropdown-toggle" type="button" data-toggle="dropdown">Reports
+              <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="<?=base_url('reports')?>"><i class="glyphicon glyphicon-book"></i> Product Reports</a></li>
+                    <li><a href="<?=base_url('reports/transactions')?>"><i class="glyphicon glyphicon-book"></i> Delivered Reports</a></li>
+                    <li><a href="<?=base_url('reports/transactions_On')?>"><i class="glyphicon glyphicon-book"></i> On Process Reports</a></li>
+                    <li><a href="<?=base_url('reports/canceltransactions')?>"><i class="glyphicon glyphicon-book"></i> Cancelled Transactions Reports</a></li>
+                  </ul>
+          </div>
+      </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li>
