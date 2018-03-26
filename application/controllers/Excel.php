@@ -5,16 +5,18 @@
     			$this->load->model('productModel');
     			$this->load->library('Excelexport');
     			$object = new PHPExcel();
-    			$object->setActiveSheetIndex(0)->mergeCells('A1:D1');
-    			$object->getActiveSheet()->getStyle('A1:D1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+    			$object->setActiveSheetIndex(0)->mergeCells('A1:D1');//merge cell
+    			$object->getActiveSheet()->getStyle('A1:D1')->getAlignment()->setHorizontal(PHPExcel_Style_Alignment::HORIZONTAL_CENTER);//center text
+    			$object->getActiveSheet()->getStyle('A1:D1')->getFont()->setBold(true);
+    			$object->getActiveSheet()->getStyle('A1:D1')->getFill()->setFillType(PHPExcel_Style_Fill::FILL_SOLID)->getStartColor()->setRGB('FF6600');
     			$object->getActiveSheet()->getStyle('C1')->getNumberFormat()->setFormatCode(PHPExcel_Style_NumberFormat::FORMAT_NUMBER);
     			$object->getActiveSheet()->getStyle('D')->getFont()->getColor()->setARGB(PHPExcel_Style_Color::COLOR_RED);
     			$object->getActiveSheet()->getStyle('B13')->getNumberFormat()->setFormatCode(PHPExcel_Style_NumberFormat::FORMAT_TEXT );
     			$object->getActiveSheet()->getStyle('D')->getNumberFormat()->setFormatCode(PHPExcel_Style_NumberFormat::FORMAT_NUMBER_COMMA_SEPARATED1 );
-    			  $object->getActiveSheet()->getColumnDimension('A')->setWidth(15);
-    			  $object->getActiveSheet()->getColumnDimension('B')->setWidth(15);
-    			  $object->getActiveSheet()->getColumnDimension('C')->setWidth(15);
-   				  $object->getActiveSheet()->getColumnDimension('D')->setWidth(15);
+    			$object->getActiveSheet()->getColumnDimension('A')->setWidth(15);
+    			$object->getActiveSheet()->getColumnDimension('B')->setWidth(15);
+    			$object->getActiveSheet()->getColumnDimension('C')->setWidth(15);
+   				$object->getActiveSheet()->getColumnDimension('D')->setWidth(15);
 
    				 
 
@@ -23,7 +25,7 @@
     			$column = 0;
     			foreach($table_columns as $field){
     				$object->getActiveSheet()->SetCellValueByColumnAndRow($column, 2, $field);
-    				 $object->getActiveSheet()->SetCellValueByColumnAndRow($column, 1, 'Product Reports');
+    				 $object->getActiveSheet()->SetCellValueByColumnAndRow($column, 1, 'Product Reports');//blank fields(merge cell)
 					$column++;
     			}
 
@@ -53,3 +55,6 @@
  			 }
 			
 	}
+
+
+	
